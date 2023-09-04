@@ -8,6 +8,5 @@
     "LanguageHindi": "Hindi",
     "BodyOne": "Flutter is a popular open-source framework for building natively compiled applications for mobile, web, and desktop from a single codebase. It offers a rich set of pre-designed widgets, making it easier to create beautiful and interactive user interfaces. Flutter's hot reload feature allows developers to see the instant results of their code changes, making the development process more efficient.",
     "BodyTwo": "Flutter is known for its fast development, and it's a top choice for building cross-platform applications. With a single codebase, you can reach users on Android, iOS, and the web. It's powered by the Dart programming language, which is easy to learn and offers great performance. Whether you're a beginner or an experienced developer, Flutter provides an excellent framework for creating modern and feature-rich apps."
-
   }
 }

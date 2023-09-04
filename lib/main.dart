@@ -2,18 +2,27 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_translate/flutter_translate.dart';
 import 'package:fs_translator/homePage.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
+import 'package:onesignal_flutter/onesignal_flutter.dart';
 
-Future<void> main() async {
-
+Future<void> main()  async {
+  WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(
       systemNavigationBarColor: Colors.white,
       statusBarColor: Colors.green,
       statusBarIconBrightness: Brightness.dark,
       systemNavigationBarIconBrightness: Brightness.dark,
+
     ),
   );
-
+  NoSplash.splashFactory;
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+  MobileAds.instance.initialize();
+  OneSignal.Debug.setLogLevel(OSLogLevel.verbose);
+  OneSignal.initialize("b44e735b-3b63-4dd4-9da8-b229555bcf4c");
+  OneSignal.Notifications.requestPermission(true);
+  OneSignal.consentGiven(true);
   var delegate = await LocalizationDelegate.create(
       fallbackLocale: 'en',
       supportedLocales: ['en', 'hi', 'guj']);
