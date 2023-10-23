@@ -20,7 +20,7 @@ Future<void> main()  async {
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
   MobileAds.instance.initialize();
   OneSignal.Debug.setLogLevel(OSLogLevel.verbose);
-  OneSignal.initialize("b44e735b-3b63-4dd4-9da8-b229555bcf4c");
+  OneSignal.initialize("Your One Signal SDK Key");
   OneSignal.Notifications.requestPermission(true);
   OneSignal.consentGiven(true);
   var delegate = await LocalizationDelegate.create(
